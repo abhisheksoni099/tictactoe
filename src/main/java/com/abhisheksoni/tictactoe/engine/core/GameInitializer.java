@@ -44,6 +44,7 @@ public class GameInitializer {
             gameCache.getCurrentGame().reinitialize();
             return gameCache.getCurrentGame();
         }
+        renderer.renderWarning("Initializing game");
         Game game = new Game.Builder()
                 .setBoard(inputBoard())
                 .setPlayers(inputPlayers())

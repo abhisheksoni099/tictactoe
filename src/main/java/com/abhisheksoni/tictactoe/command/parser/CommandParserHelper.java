@@ -3,6 +3,7 @@ package com.abhisheksoni.tictactoe.command.parser;
 import com.abhisheksoni.tictactoe.command.model.CommandValidationResult;
 import com.abhisheksoni.tictactoe.command.type.*;
 import com.abhisheksoni.tictactoe.engine.core.GameCache;
+import com.abhisheksoni.tictactoe.model.game.Game;
 
 public class CommandParserHelper {
     public Command parse(String[] arguments) {
@@ -29,7 +30,15 @@ public class CommandParserHelper {
         if (commandValidationResult.isSuccess()) {
             return;
         }
-        GameCache.getInstance().getCurrentGame().setWarning(commandValidationResult.getMessage());
+        populateGameWarning(commandValidationResult);
+    }
+
+    private void populateGameWarning(CommandValidationResult commandValidationResult) {
+        Game game = GameCache.getInstance().getCurrentGame();
+        if (game == null) {
+            return;
+        }
+        game.setWarning(commandValidationResult.getMessage());
     }
 
     private Command parseSingleWordCommand(String[] arguments) {

@@ -59,4 +59,9 @@ public class CommandLineRenderer implements Renderer {
     public void renderEndGameMessage() {
         commandLineRendererHelper.renderEndGameMessage();
     }
+
+    @Override
+    public void renderWarning(String message) {
+        commandLineRendererHelper.renderWarning(message);
+    }
 }

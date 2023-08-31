@@ -11,17 +11,26 @@
 
 ## Running Tic Tac Toe
 
-* Run the below commands:
+### Building the Project
 
 ```console
 mvn clean compile assembly:single
 ```
 
+* The game can be run with or without initial arguments
+
+### Running without Arguments
+
+```console
+java -cp target/tictactoe-1.0-jar-with-dependencies.jar com.abhisheksoni.tictactoe.Runner
+```
+
+### Running with Initial Arguments
 ```console
 java -cp target/tictactoe-1.0-jar-with-dependencies.jar com.abhisheksoni.tictactoe.Runner StartGame 2 u1 x u2 0 3
 ```
 
-* Alternatively, the convenience script `start.sh` can be run
+* Alternatively, the convenience script `start.sh` or `start.bat` can be run
 
 ```console
 sh start.sh

@@ -1,5 +1,8 @@
 package com.abhisheksoni.tictactoe.input;
 
+import com.abhisheksoni.tictactoe.engine.core.GameCache;
+
+import java.util.Queue;
 import java.util.Scanner;
 
 public class InputControl {
@@ -23,6 +26,10 @@ public class InputControl {
     }
 
     public String string() {
+        Queue<String> inputs = GameCache.getInstance().getPreloadedInputs();
+        if (!inputs.isEmpty()) {
+            return inputs.remove();
+        }
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }

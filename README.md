@@ -26,11 +26,15 @@ java -cp target/tictactoe-1.0-jar-with-dependencies.jar com.abhisheksoni.tictact
 ```
 
 ### Running with Initial Arguments
+
 ```console
 java -cp target/tictactoe-1.0-jar-with-dependencies.jar com.abhisheksoni.tictactoe.Runner StartGame 2 u1 x u2 0 3
 ```
 
-* Alternatively, the convenience script `start.sh` or `start.bat` can be run
+### Alternate Run Script
+
+* An alternate to the above, the convenience script `start.sh` or `start.bat` can be run
+* This script would build and run the game
 
 ```console
 sh start.sh

@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>PROJECT-tictactoe</artifactId>
+    <artifactId>tictactoe</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>PROJECT-tictactoe</name>
+    <name>tictactoe</name>
     <url>http://maven.apache.org</url>
 
     <properties>
